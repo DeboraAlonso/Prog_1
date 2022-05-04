@@ -6,7 +6,7 @@ Game::Game()
 
 	Wind.setVerticalSyncEnabled(BPP);
 
-	backg_tx.loadFromFile("Assets/backgroung.png");
+	backg_tx.loadFromFile("Assets/Background.jpg");
 	backg_sp.setTexture(backg_tx);
 
 	/*backg_sp.loadFromFile("Assets/spritesheet.png");
@@ -19,9 +19,11 @@ void Game::loop()
 {
 	while (Wind.isOpen())
 	{
-		Wind.draw(backg_sp);
+		
 
 		Wind.clear();
+
+		Wind.draw(backg_sp);
 
 		Wind.display();
 
