@@ -21,6 +21,12 @@
     <ClInclude Include="Mario.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Afichmation.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp">
@@ -30,6 +36,9 @@
       <Filter>Archivos de recursos</Filter>
     </ClCompile>
     <ClCompile Include="Mario.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Afichmation.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
