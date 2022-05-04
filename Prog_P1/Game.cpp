@@ -7,19 +7,25 @@ Game::Game()
 	Wind.setVerticalSyncEnabled(BPP);
 
 	backg_tx.loadFromFile("Assets/backgroung.png");
-	backg_tx.setTexture(backg_tx);
+	backg_sp.setTexture(backg_tx);
 
-	backg_sp.loadFromFile("Assets/spritesheet.png");
+	/*backg_sp.loadFromFile("Assets/spritesheet.png");
 	backg_sp.setTexture(backg_sp);
 
-	backg_sp.setScale(30, 30);
+	backg_sp.setScale(30, 30);*/
 }
 
 void Game::loop()
 {
 	while (Wind.isOpen())
 	{
-		while (Wind.pollEvent(evt))
+		Wind.draw(backg_sp);
+
+		Wind.clear();
+
+		Wind.display();
+
+		/*while (Wind.pollEvent(evt))
 		{
 			switch (evt.key.code)
 			{
@@ -36,7 +42,7 @@ void Game::loop()
 
 				case Keyboard::
 
-			}
-		}
+			}*/
+		//}
 	}
 }
