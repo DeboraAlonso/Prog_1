@@ -22,8 +22,6 @@ Afichmation::Afichmation(string path, bool loop, int width, int height)
 
 	flippedX = false;
 
-	flippedY = false;
-
 	setScale(getScale());
 
 	setOrigin(width / 2, height / 2);

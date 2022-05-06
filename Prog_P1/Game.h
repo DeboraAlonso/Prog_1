@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "Mario.h"
 
 #define HEIGHT 800
 #define WIDTH 600
@@ -16,6 +17,14 @@ public:
 
 	//void update();
 
+	void gamescreen();
+
+	void backg_grap();
+
+	void fps();
+
+	void draw();
+
 	void loop();
 
 private:
@@ -27,6 +36,8 @@ private:
 	Sprite backg_sp;
 
 	Event evt;
+
+	Mario Character;
 
 
 };

@@ -2,17 +2,41 @@
 
 Game::Game()
 {
+	
+	gamescreen();
+
+	fps();
+
+	backg_grap();
+
+
+
+	
+}
+
+void Game::gamescreen()
+{
 	Wind.create(VideoMode(HEIGHT, WIDTH, BPP), "Prog practice part 1");
+}
 
+void Game::fps()
+{
 	Wind.setVerticalSyncEnabled(BPP);
+}
 
+void Game::backg_grap()
+{
 	backg_tx.loadFromFile("Assets/Background.jpg");
 	backg_sp.setTexture(backg_tx);
+}
 
-	/*backg_sp.loadFromFile("Assets/spritesheet.png");
-	backg_sp.setTexture(backg_sp);
+void Game::draw()
+{
+	Wind.draw(backg_sp);
 
-	backg_sp.setScale(30, 30);*/
+	Character.getCharacter();
+
+	Wind.display();
 }
 
 void Game::loop()
@@ -20,31 +44,11 @@ void Game::loop()
 	while (Wind.isOpen())
 	{
 		
-
 		Wind.clear();
 
-		Wind.draw(backg_sp);
+		Character.update();
 
-		Wind.display();
-
-		/*while (Wind.pollEvent(evt))
-		{
-			switch (evt.key.code)
-			{
-
-			case Keyboard::Escape:
-
-				exit(1);
-
-				break;
-
-			case Keyboard::Up:
-
-				break;
-
-				case Keyboard::
-
-			}*/
-		//}
+		draw();
+	
 	}
 }
