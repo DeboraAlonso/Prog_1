@@ -11,7 +11,7 @@ void Mario::spr_grap()
 {
 	_Mario = Afichmation("assets/spritesheet.png", true, 100, 110);
 
-	_Mario.Add("idle", { 0, 2, 1, 0, 2 }, 8, false);
+	_Mario.Add("idle", { 0, 2, 1, 0, 2 }, 8, true);
 
 	//Otras animaciones complementarias y necesarias.
 	_Mario.Add("run", { 3, 4, 5, 4 }, 8, true);
@@ -20,7 +20,7 @@ void Mario::spr_grap()
 	_Mario.Play("idle");
 
 	//Puedo utilizar métodos propios de Sprite, en este caso setScale.
-	_Mario.setScale(Vector2f(30.f, 30.f));
+	_Mario.setScale(Vector2f(0.85f, 0.85f));
 }
 
 Afichmation Mario::getCharacter()
@@ -34,6 +34,7 @@ void Mario::update()
 
 	while (Wind.pollEvent(m_evt))
 	{
+
 		switch (m_evt.key.code)
 		{
 		case Keyboard::Left:

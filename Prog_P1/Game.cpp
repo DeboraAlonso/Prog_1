@@ -2,16 +2,12 @@
 
 Game::Game()
 {
-	
 	gamescreen();
 
 	fps();
 
 	backg_grap();
 
-
-
-	
 }
 
 void Game::gamescreen()
@@ -34,7 +30,7 @@ void Game::draw()
 {
 	Wind.draw(backg_sp);
 
-	Character.getCharacter();
+	Wind.draw(Character.getCharacter());
 
 	Wind.display();
 }
