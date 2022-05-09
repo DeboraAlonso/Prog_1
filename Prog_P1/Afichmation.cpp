@@ -22,6 +22,8 @@ Afichmation::Afichmation(string path, bool loop, int width, int height)
 
 	flippedX = false;
 
+	flippedY = false;
+
 	setScale(getScale());
 
 	setOrigin(width / 2, height / 2);
@@ -34,6 +36,11 @@ Afichmation::Afichmation(string path, bool loop, int width, int height)
 void Afichmation::FlipX(bool isFlipped)
 {
 	flippedX = isFlipped;
+}
+
+void Afichmation::FlipY(bool isFlipped)
+{
+	flippedY = isFlipped;
 }
 
 bool Afichmation::IsPlaying(string name)
