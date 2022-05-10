@@ -1,1 +1,1 @@
-Prog_P1
+First part of Programmation I - exercise I.
